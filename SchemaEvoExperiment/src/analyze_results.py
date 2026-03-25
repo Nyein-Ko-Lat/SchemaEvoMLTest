@@ -1,13 +1,9 @@
 """
 analyze_results.py
 
-Analyze JSONL logs produced by your runner (one record per task).
+Analyze JSONL logs produced by runner (one record per task).
 - Loads one or many *.jsonl files
 - Normalizes fields (variant/status/fail_type)
-- Produces professor-friendly summary tables:
-  * crash rate per variant
-  * failure taxonomy counts
-  * drift metric summaries on successes (median, p90, mean)
 - Exports:
   * combined_flat.csv  (one row per task)
   * summary_by_variant.csv
@@ -29,7 +25,6 @@ from typing import Any, Dict, List, Optional, Tuple
 import numpy as np
 import pandas as pd
 import re
-
 
 # -------------------------
 # Loading
@@ -217,7 +212,7 @@ def crash_rate_table(df: pd.DataFrame) -> pd.DataFrame:
 
     out = out.merge(base, on="align_mode", how="left")
 
-    # ---- deltas vs baseline (counts are what you want) ----
+    # ---- deltas vs baseline ----
     out["delta_crash_count"] = out["n_crash"] - out["baseline_n_crash"]
     out["delta_success_count"] = out["n_success"] - out["baseline_n_success"]
     out["delta_crash_rate"] = out["crash_rate"] - out["baseline_crash_rate"]
@@ -264,42 +259,6 @@ def silent_summary_table(df: pd.DataFrame) -> pd.DataFrame:
     out["delta_silent_rate"] = out["silent_rate"] - out["baseline_silent_rate"]
 
     return out.sort_values(["align_mode", "delta_silent_count"], ascending=[True, False])
-
-def quick_professor_table(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Crash + baseline repeated + deltas + silent summary + a few drift medians.
-    """
-    crash = crash_rate_table(df)
-    silent = silent_summary_table(df)
-    drift = drift_summary_table(df)
-
-    merged = crash.merge(silent, on=["variant", "align_mode"], how="left")
-    if not drift.empty:
-        merged = merged.merge(drift, on=["variant", "align_mode"], how="left")
-
-    keep = [
-        "variant", "align_mode",
-        "n_tasks", "n_success", "n_crash",
-        "baseline_n_crash", "delta_crash_count",
-        "n_silent", "baseline_n_silent", "delta_silent_count",
-    ]
-
-    for c in ["crash_rate", "baseline_crash_rate", "delta_crash_rate", "silent_rate", "baseline_silent_rate", "delta_silent_rate"]:
-        if c in merged.columns:
-            keep.append(c)
-    # add a few drift medians if present
-    for c in [
-        "nrmse_median",
-        "ks_median",
-        "spearman_median",
-        "agreement_median",
-        "jsd_median",
-        "duration_ms_median",  # only if duration exists
-    ]:
-        if c in merged.columns:
-            keep.append(c)
-
-    return merged[keep].sort_values(["align_mode", "delta_crash_count"], ascending=[True, False])
 
 def normalize_df(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
@@ -473,33 +432,6 @@ def drift_summary_table(df: pd.DataFrame) -> pd.DataFrame:
     out = succ.groupby(["variant", "align_mode"], dropna=False).apply(agg_block).apply(pd.Series).reset_index()
     return out
 
-
-def quick_professor_table(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    A compact table you can paste into slides:
-    crash_rate + a couple drift medians.
-    """
-    base = crash_rate_table(df)
-    drift = drift_summary_table(df)
-
-    if drift.empty:
-        return base
-
-    merged = base.merge(drift, on=["variant","align_mode"], how="left")
-
-    # Pick a small set of columns that usually exist
-    keep = ["variant", "align_mode", "n_tasks", "crash_rate", "success_rate"]
-    for c in [
-        "nrmse",
-        "ks",
-        "spearman",
-    ]:
-        if c in merged.columns:
-            keep.append(c)
-
-    return merged[keep].sort_values(["crash_rate", "n_tasks"], ascending=[False, False])
-
-
 # -------------------------
 # Optional plots (simple, no seaborn)
 # -------------------------
@@ -582,7 +514,6 @@ def main():
     crash_tbl = crash_rate_table(df)
     fail_tbl = failure_taxonomy_table(df)
     drift_tbl = drift_summary_table(df)
-    prof_tbl = quick_professor_table(df)
     silent_tbl = silent_summary_table(df)
     crash_bucket_tbl = (
         df[df["status"] == "crash"]
@@ -599,7 +530,6 @@ def main():
     crash_tbl.to_csv(out_dir / "crash_rate_by_variant.csv", index=False)
     fail_tbl.to_csv(out_dir / "failures_by_variant.csv", index=False)
     drift_tbl.to_csv(out_dir / "drift_summary_by_variant.csv", index=False)
-    prof_tbl.to_csv(out_dir / "professor_ready_table.csv", index=False)
     crash_bucket_tbl.to_csv(out_dir / "crash_buckets_by_variant.csv", index=False)
     silent_tbl.to_csv(out_dir / "silent_summary_by_variant.csv", index=False)
 
@@ -609,14 +539,11 @@ def main():
         print(" -", f)
     print("\nSaved:")
     print(" -", combined_csv)
-    print(" -", out_dir / "professor_ready_table.csv")
     print(" -", out_dir / "crash_rate_by_variant.csv")
     print(" -", out_dir / "failures_by_variant.csv")
     if not drift_tbl.empty:
         print(" -", out_dir / "drift_summary_by_variant.csv")
 
-    print("\nProfessor-ready table (top 20 rows):")
-    print(prof_tbl.head(20).to_string(index=False))
 
     if args.save_plots:
         save_plots(df, out_dir)

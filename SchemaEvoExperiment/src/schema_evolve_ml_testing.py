@@ -320,7 +320,7 @@ def infer_target_from_training_table(df: pd.DataFrame) -> str:
         n = str(colname).lower()
         return n == "id" or n.endswith("_id") or n in ("key", "uid") or ("id" in n and len(n) <= 12)
 
-    # ---------- B) Your numeric heuristic fallback (mostly unchanged) ----------
+    # ---------- B) numeric substitute logic ----------
     n = len(df)
     best = None
     best_score = -1.0
@@ -665,7 +665,7 @@ def load_done_ids(jsonl_path: Path) -> set[str]:
 # Other tables are attached via:
 #  - 1:1 merge (safe)
 #  - 1:many aggregation (count/nunique/mean/std/min/max) then merge (safe)
-#  - many:many => skip (or aggregate + merge if you want later)
+#  - many:many => skip
 # ---------------------------
 
 def drop_bad_cols(df: pd.DataFrame) -> pd.DataFrame:
@@ -678,7 +678,7 @@ def find_label_table(training_tables: List[Tuple[Path, pd.DataFrame]]) -> Tuple[
     Pick base table index + label column name.
     Strategy:
       1) If any table contains preferred label names, pick that (first match).
-      2) Else: pick table where fallback heuristic finds best target.
+      2) Else: pick table where substitute logic finds best target.
     """
     preferred = ["target", "label", "y", "class", "outcome", "score", "risk_category", "grade"]
     # pass 1: preferred names
@@ -688,7 +688,7 @@ def find_label_table(training_tables: List[Tuple[Path, pd.DataFrame]]) -> Tuple[
             if name in lower_map:
                 return i, str(lower_map[name])
 
-    # pass 2: fallback heuristic (your function)
+    # pass 2: substitute logic
     best_i, best_y = None, None
     for i, (p, df) in enumerate(training_tables):
         try:
