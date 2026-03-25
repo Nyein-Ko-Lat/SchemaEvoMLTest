@@ -1,0 +1,93 @@
+{
+  "task_folder": "C:\\ThesisData\\original\\length1_18",
+  "created_at": "2026-02-25T16:05:21.110385",
+  "ops": [
+    "rename"
+  ],
+  "mode_key_sensitive": "key",
+  "plan": {
+    "seed": 3627240110,
+    "built_at": "2026-02-25T16:05:21.108114",
+    "join_keys": [],
+    "rename_col": "petal width (cm)",
+    "drop_col": "petal length (cm)",
+    "address_col": null,
+    "datetime_col": null,
+    "datetime_format": null,
+    "meaning_num_col": "sepal width (cm)",
+    "meaning_cat_col": "petal length (cm)",
+    "datetime_rule": "flip_date_time",
+    "category_keep_topk": 2,
+    "unit_scale_divisor": 10.0,
+    "task_id": "length1_18",
+    "ops": [
+      "rename"
+    ],
+    "plan_sample_rows": 500,
+    "label_col": "y",
+    "label_source_file": "training_0.csv",
+    "protected_cols": [
+      "y"
+    ],
+    "global_seed": 7,
+    "task_seed": 3627240110,
+    "label_priority": [
+      "Score",
+      "label",
+      "target",
+      "y",
+      "class",
+      "outcome",
+      "risk_category"
+    ]
+  },
+  "files": [
+    {
+      "input": "C:\\ThesisData\\original\\length1_18\\training_0.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\rename\\length1_18\\training_0.csv",
+      "ops": [
+        {
+          "op": "rename",
+          "applied": {
+            "petal width (cm)": "petal width (cm)__renamed"
+          }
+        }
+      ],
+      "rows_before": 75,
+      "rows_after": 75,
+      "schema_diff": {
+        "added": [
+          "petal width (cm)__renamed"
+        ],
+        "removed": [
+          "petal width (cm)"
+        ],
+        "dtype_changes": []
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length1_18\\test_0.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\rename\\length1_18\\test_0.csv",
+      "ops": [
+        {
+          "op": "rename",
+          "applied": {
+            "petal width (cm)": "petal width (cm)__renamed"
+          }
+        }
+      ],
+      "rows_before": 75,
+      "rows_after": 75,
+      "schema_diff": {
+        "added": [
+          "petal width (cm)__renamed"
+        ],
+        "removed": [
+          "petal width (cm)"
+        ],
+        "dtype_changes": []
+      }
+    }
+  ],
+  "note": "target.csv copied unchanged; training/test evolved using the same per-task plan; blank/unnamed index cols dropped"
+}

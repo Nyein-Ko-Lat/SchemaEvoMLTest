@@ -1,0 +1,38 @@
+{
+  "seed": 599168113,
+  "built_at": "2026-03-22T17:43:12.967147",
+  "join_keys": [
+    "businesses",
+    "counts",
+    "zipcode"
+  ],
+  "rename_col": "counts",
+  "drop_col": "counts",
+  "address_col": null,
+  "datetime_col": null,
+  "datetime_format": null,
+  "meaning_num_col": "counts",
+  "meaning_cat_col": "counts",
+  "datetime_rule": "flip_date_time",
+  "category_keep_topk": 10,
+  "unit_scale_divisor": 1000.0,
+  "task_id": "length3_52",
+  "ops": [
+    "meaning"
+  ],
+  "plan_sample_rows": 500,
+  "label_col": null,
+  "label_source_file": null,
+  "protected_cols": [],
+  "global_seed": 2,
+  "task_seed": 599168113,
+  "label_priority": [
+    "Score",
+    "label",
+    "target",
+    "y",
+    "class",
+    "outcome",
+    "risk_category"
+  ]
+}

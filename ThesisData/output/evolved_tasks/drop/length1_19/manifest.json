@@ -1,0 +1,37 @@
+{
+  "seed": 46442074,
+  "built_at": "2026-02-27T22:38:34.026966",
+  "join_keys": [
+    "calaccess_committee_id",
+    "committee_name"
+  ],
+  "rename_col": "calaccess_committee_id",
+  "drop_col": "contributor_city",
+  "address_col": null,
+  "datetime_col": "date_received",
+  "datetime_format": "%Y-%m-%d",
+  "meaning_num_col": "amount",
+  "meaning_cat_col": "contributor_city",
+  "datetime_rule": "flip_date_time",
+  "category_keep_topk": 10,
+  "unit_scale_divisor": 10.0,
+  "task_id": "length1_19",
+  "ops": [
+    "drop"
+  ],
+  "plan_sample_rows": 500,
+  "label_col": null,
+  "label_source_file": null,
+  "protected_cols": [],
+  "global_seed": 7,
+  "task_seed": 46442074,
+  "label_priority": [
+    "Score",
+    "label",
+    "target",
+    "y",
+    "class",
+    "outcome",
+    "risk_category"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "seed": 1986606631,
+  "built_at": "2026-02-27T22:43:45.159648",
+  "join_keys": [
+    "Deaths",
+    "EndDay",
+    "EndMonth",
+    "EndYear",
+    "Initiator",
+    "Outcome",
+    "PolityName",
+    "StartDay",
+    "StartMonth",
+    "StartYear",
+    "WarID"
+  ],
+  "rename_col": "StartYear",
+  "drop_col": "Deaths",
+  "address_col": null,
+  "datetime_col": null,
+  "datetime_format": null,
+  "meaning_num_col": "EndYear",
+  "meaning_cat_col": "EndDay",
+  "datetime_rule": "split_date_parts",
+  "category_keep_topk": 5,
+  "unit_scale_divisor": 1000.0,
+  "task_id": "length5_79",
+  "ops": [
+    "drop"
+  ],
+  "plan_sample_rows": 500,
+  "label_col": "Outcome",
+  "label_source_file": "training_0.csv",
+  "protected_cols": [
+    "Outcome"
+  ],
+  "global_seed": 7,
+  "task_seed": 1986606631,
+  "label_priority": [
+    "Score",
+    "label",
+    "target",
+    "y",
+    "class",
+    "outcome",
+    "risk_category"
+  ]
+}

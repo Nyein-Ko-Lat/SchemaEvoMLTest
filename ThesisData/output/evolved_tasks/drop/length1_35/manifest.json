@@ -1,0 +1,34 @@
+{
+  "seed": 3786566256,
+  "built_at": "2026-02-27T22:38:39.808850",
+  "join_keys": [],
+  "rename_col": "Source Zipcode",
+  "drop_col": "NAICS Code Description",
+  "address_col": null,
+  "datetime_col": null,
+  "datetime_format": null,
+  "meaning_num_col": "NAICS Code Description",
+  "meaning_cat_col": "Counts",
+  "datetime_rule": "split_date_parts",
+  "category_keep_topk": 5,
+  "unit_scale_divisor": 10.0,
+  "task_id": "length1_35",
+  "ops": [
+    "drop"
+  ],
+  "plan_sample_rows": 500,
+  "label_col": null,
+  "label_source_file": null,
+  "protected_cols": [],
+  "global_seed": 7,
+  "task_seed": 3786566256,
+  "label_priority": [
+    "Score",
+    "label",
+    "target",
+    "y",
+    "class",
+    "outcome",
+    "risk_category"
+  ]
+}

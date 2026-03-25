@@ -1,0 +1,131 @@
+{
+  "task_folder": "data\\original\\length1_41",
+  "created_at": "2026-02-19T16:05:26.932139",
+  "ops": [
+    "meaning"
+  ],
+  "mode_key_sensitive": "key",
+  "plan": {
+    "seed": 7,
+    "built_at": "2026-02-19T16:05:26.929808",
+    "join_keys": [],
+    "rename_col": "A10300",
+    "drop_col": "N19300",
+    "address_col": null,
+    "datetime_col": null,
+    "datetime_format": null,
+    "meaning_num_col": "A04800",
+    "meaning_cat_col": "STATEFIPS",
+    "datetime_rule": "split_date_parts",
+    "category_keep_topk": 5,
+    "unit_scale_divisor": 1000.0,
+    "task_id": "length1_41",
+    "ops": [
+      "meaning"
+    ],
+    "plan_sample_rows": 500
+  },
+  "files": [
+    {
+      "input": "data\\original\\length1_41\\training_0.csv",
+      "output": "data\\output\\evolved_tasks\\meaning\\length1_41\\training_0.csv",
+      "ops": [
+        {
+          "op": "meaning",
+          "changes": [
+            {
+              "type": "unit_scale",
+              "column": "A04800",
+              "rule": "divide_by_1000",
+              "before_stats": {
+                "mean": 77463.2429,
+                "std": 2072185.5137978492
+              },
+              "after_stats": {
+                "mean": 77.4632429,
+                "std": 2072.185513797849
+              }
+            },
+            {
+              "type": "category_collapse",
+              "column": "STATEFIPS",
+              "rule": "keep_top5_else_Other",
+              "cardinality_before": 26,
+              "cardinality_after": 6,
+              "mapped_to_other_ratio": 0.5476
+            }
+          ]
+        }
+      ],
+      "rows_before": 20000,
+      "rows_after": 20000,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": [
+          {
+            "column": "A04800",
+            "before": "int64",
+            "after": "float64"
+          },
+          {
+            "column": "STATEFIPS",
+            "before": "int64",
+            "after": "object"
+          }
+        ]
+      }
+    },
+    {
+      "input": "data\\original\\length1_41\\test_0.csv",
+      "output": "data\\output\\evolved_tasks\\meaning\\length1_41\\test_0.csv",
+      "ops": [
+        {
+          "op": "meaning",
+          "changes": [
+            {
+              "type": "unit_scale",
+              "column": "A04800",
+              "rule": "divide_by_1000",
+              "before_stats": {
+                "mean": 79240.00867564588,
+                "std": 1926012.4824894643
+              },
+              "after_stats": {
+                "mean": 79.2400086756459,
+                "std": 1926.0124824894642
+              }
+            },
+            {
+              "type": "category_collapse",
+              "column": "STATEFIPS",
+              "rule": "keep_top5_else_Other",
+              "cardinality_before": 26,
+              "cardinality_after": 6,
+              "mapped_to_other_ratio": 0.6152279154484015
+            }
+          ]
+        }
+      ],
+      "rows_before": 83452,
+      "rows_after": 83452,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": [
+          {
+            "column": "A04800",
+            "before": "int64",
+            "after": "float64"
+          },
+          {
+            "column": "STATEFIPS",
+            "before": "int64",
+            "after": "object"
+          }
+        ]
+      }
+    }
+  ],
+  "note": "target.csv copied unchanged; training/test evolved using the same per-task plan"
+}

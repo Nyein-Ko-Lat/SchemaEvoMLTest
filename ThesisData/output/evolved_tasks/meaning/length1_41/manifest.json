@@ -1,0 +1,20 @@
+{
+  "seed": 7,
+  "built_at": "2026-02-19T16:05:26.929808",
+  "join_keys": [],
+  "rename_col": "A10300",
+  "drop_col": "N19300",
+  "address_col": null,
+  "datetime_col": null,
+  "datetime_format": null,
+  "meaning_num_col": "A04800",
+  "meaning_cat_col": "STATEFIPS",
+  "datetime_rule": "split_date_parts",
+  "category_keep_topk": 5,
+  "unit_scale_divisor": 1000.0,
+  "task_id": "length1_41",
+  "ops": [
+    "meaning"
+  ],
+  "plan_sample_rows": 500
+}

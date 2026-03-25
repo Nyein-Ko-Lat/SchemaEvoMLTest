@@ -1,0 +1,393 @@
+{
+  "task_folder": "C:\\ThesisData\\original\\length3_52",
+  "created_at": "2026-03-22T17:43:12.968931",
+  "ops": [
+    "meaning"
+  ],
+  "mode_key_sensitive": "key",
+  "plan": {
+    "seed": 599168113,
+    "built_at": "2026-03-22T17:43:12.967147",
+    "join_keys": [
+      "businesses",
+      "counts",
+      "zipcode"
+    ],
+    "rename_col": "counts",
+    "drop_col": "counts",
+    "address_col": null,
+    "datetime_col": null,
+    "datetime_format": null,
+    "meaning_num_col": "counts",
+    "meaning_cat_col": "counts",
+    "datetime_rule": "flip_date_time",
+    "category_keep_topk": 10,
+    "unit_scale_divisor": 1000.0,
+    "task_id": "length3_52",
+    "ops": [
+      "meaning"
+    ],
+    "plan_sample_rows": 500,
+    "label_col": null,
+    "label_source_file": null,
+    "protected_cols": [],
+    "global_seed": 2,
+    "task_seed": 599168113,
+    "label_priority": [
+      "Score",
+      "label",
+      "target",
+      "y",
+      "class",
+      "outcome",
+      "risk_category"
+    ]
+  },
+  "files": [
+    {
+      "input": "C:\\ThesisData\\original\\length3_52\\training_0.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\meaning\\length3_52\\training_0.csv",
+      "ops": [
+        {
+          "op": "meaning",
+          "changes": [
+            {
+              "type": "unit_scale",
+              "column": "counts",
+              "rule": "divide_by_1000",
+              "before_stats": {
+                "mean": 1.836734693877551
+              },
+              "after_stats": {
+                "mean": 0.0018367346938775516
+              }
+            },
+            {
+              "type": "category_collapse",
+              "column": "counts",
+              "rule": "keep_top10_else_Other",
+              "cardinality_before": 7,
+              "cardinality_after": 7,
+              "mapped_to_other_ratio": 0.0
+            }
+          ]
+        }
+      ],
+      "rows_before": 98,
+      "rows_after": 98,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": [
+          {
+            "column": "counts",
+            "before": "int64",
+            "after": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length3_52\\training_1.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\meaning\\length3_52\\training_1.csv",
+      "ops": [
+        {
+          "op": "meaning",
+          "changes": [
+            {
+              "type": "unit_scale",
+              "column": "counts",
+              "rule": "divide_by_1000",
+              "before_stats": {
+                "mean": 14.329545454545455
+              },
+              "after_stats": {
+                "mean": 0.014329545454545456
+              }
+            },
+            {
+              "type": "category_collapse",
+              "column": "counts",
+              "rule": "keep_top10_else_Other",
+              "cardinality_before": 33,
+              "cardinality_after": 11,
+              "mapped_to_other_ratio": 0.32954545454545453
+            }
+          ]
+        }
+      ],
+      "rows_before": 88,
+      "rows_after": 88,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": [
+          {
+            "column": "counts",
+            "before": "int64",
+            "after": "object"
+          }
+        ]
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length3_52\\training_2.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\meaning\\length3_52\\training_2.csv",
+      "ops": [
+        {
+          "op": "meaning",
+          "changes": [
+            {
+              "type": "unit_scale",
+              "column": "counts",
+              "rule": "divide_by_1000",
+              "before_stats": {
+                "mean": 3.2962962962962963
+              },
+              "after_stats": {
+                "mean": 0.0032962962962962967
+              }
+            },
+            {
+              "type": "category_collapse",
+              "column": "counts",
+              "rule": "keep_top10_else_Other",
+              "cardinality_before": 13,
+              "cardinality_after": 11,
+              "mapped_to_other_ratio": 0.027777777777777776
+            }
+          ]
+        }
+      ],
+      "rows_before": 108,
+      "rows_after": 108,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": [
+          {
+            "column": "counts",
+            "before": "int64",
+            "after": "object"
+          }
+        ]
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length3_52\\training_3.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\meaning\\length3_52\\training_3.csv",
+      "ops": [
+        {
+          "op": "meaning",
+          "changes": [
+            {
+              "type": "unit_scale",
+              "column": "counts",
+              "rule": "divide_by_1000",
+              "before_stats": {
+                "mean": 42.7047619047619
+              },
+              "after_stats": {
+                "mean": 0.04270476190476191
+              }
+            },
+            {
+              "type": "category_collapse",
+              "column": "counts",
+              "rule": "keep_top10_else_Other",
+              "cardinality_before": 61,
+              "cardinality_after": 11,
+              "mapped_to_other_ratio": 0.6761904761904762
+            }
+          ]
+        }
+      ],
+      "rows_before": 105,
+      "rows_after": 105,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": [
+          {
+            "column": "counts",
+            "before": "int64",
+            "after": "object"
+          }
+        ]
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length3_52\\test_0.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\meaning\\length3_52\\test_0.csv",
+      "ops": [
+        {
+          "op": "meaning",
+          "changes": [
+            {
+              "type": "unit_scale",
+              "column": "counts",
+              "rule": "divide_by_1000",
+              "before_stats": {
+                "mean": 1.836734693877551
+              },
+              "after_stats": {
+                "mean": 0.0018367346938775516
+              }
+            },
+            {
+              "type": "category_collapse",
+              "column": "counts",
+              "rule": "keep_top10_else_Other",
+              "cardinality_before": 7,
+              "cardinality_after": 7,
+              "mapped_to_other_ratio": 0.0
+            }
+          ]
+        }
+      ],
+      "rows_before": 98,
+      "rows_after": 98,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": [
+          {
+            "column": "counts",
+            "before": "int64",
+            "after": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length3_52\\test_1.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\meaning\\length3_52\\test_1.csv",
+      "ops": [
+        {
+          "op": "meaning",
+          "changes": [
+            {
+              "type": "unit_scale",
+              "column": "counts",
+              "rule": "divide_by_1000",
+              "before_stats": {
+                "mean": 14.329545454545455
+              },
+              "after_stats": {
+                "mean": 0.014329545454545456
+              }
+            },
+            {
+              "type": "category_collapse",
+              "column": "counts",
+              "rule": "keep_top10_else_Other",
+              "cardinality_before": 33,
+              "cardinality_after": 11,
+              "mapped_to_other_ratio": 0.32954545454545453
+            }
+          ]
+        }
+      ],
+      "rows_before": 88,
+      "rows_after": 88,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": [
+          {
+            "column": "counts",
+            "before": "int64",
+            "after": "object"
+          }
+        ]
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length3_52\\test_2.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\meaning\\length3_52\\test_2.csv",
+      "ops": [
+        {
+          "op": "meaning",
+          "changes": [
+            {
+              "type": "unit_scale",
+              "column": "counts",
+              "rule": "divide_by_1000",
+              "before_stats": {
+                "mean": 3.2962962962962963
+              },
+              "after_stats": {
+                "mean": 0.0032962962962962967
+              }
+            },
+            {
+              "type": "category_collapse",
+              "column": "counts",
+              "rule": "keep_top10_else_Other",
+              "cardinality_before": 13,
+              "cardinality_after": 11,
+              "mapped_to_other_ratio": 0.027777777777777776
+            }
+          ]
+        }
+      ],
+      "rows_before": 108,
+      "rows_after": 108,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": [
+          {
+            "column": "counts",
+            "before": "int64",
+            "after": "object"
+          }
+        ]
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length3_52\\test_3.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\meaning\\length3_52\\test_3.csv",
+      "ops": [
+        {
+          "op": "meaning",
+          "changes": [
+            {
+              "type": "unit_scale",
+              "column": "counts",
+              "rule": "divide_by_1000",
+              "before_stats": {
+                "mean": 36.45192307692308
+              },
+              "after_stats": {
+                "mean": 0.036451923076923076
+              }
+            },
+            {
+              "type": "category_collapse",
+              "column": "counts",
+              "rule": "keep_top10_else_Other",
+              "cardinality_before": 55,
+              "cardinality_after": 11,
+              "mapped_to_other_ratio": 0.5769230769230769
+            }
+          ]
+        }
+      ],
+      "rows_before": 104,
+      "rows_after": 104,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": [
+          {
+            "column": "counts",
+            "before": "int64",
+            "after": "object"
+          }
+        ]
+      }
+    }
+  ],
+  "note": "target.csv copied unchanged; training/test evolved using the same per-task plan; blank/unnamed index cols dropped"
+}

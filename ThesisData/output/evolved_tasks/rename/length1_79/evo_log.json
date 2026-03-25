@@ -1,0 +1,139 @@
+{
+  "task_folder": "C:\\ThesisData\\original\\length1_79",
+  "created_at": "2026-02-25T16:07:44.637195",
+  "ops": [
+    "rename"
+  ],
+  "mode_key_sensitive": "key",
+  "plan": {
+    "seed": 1068751018,
+    "built_at": "2026-02-25T16:07:44.634226",
+    "join_keys": [
+      "Country"
+    ],
+    "rename_col": "Country",
+    "drop_col": "Region",
+    "address_col": null,
+    "datetime_col": null,
+    "datetime_format": null,
+    "meaning_num_col": "Happiness_Score_17",
+    "meaning_cat_col": "Country",
+    "datetime_rule": "split_date_parts",
+    "category_keep_topk": 5,
+    "unit_scale_divisor": 10.0,
+    "task_id": "length1_79",
+    "ops": [
+      "rename"
+    ],
+    "plan_sample_rows": 500,
+    "label_col": null,
+    "label_source_file": null,
+    "protected_cols": [],
+    "global_seed": 7,
+    "task_seed": 1068751018,
+    "label_priority": [
+      "Score",
+      "label",
+      "target",
+      "y",
+      "class",
+      "outcome",
+      "risk_category"
+    ]
+  },
+  "files": [
+    {
+      "input": "C:\\ThesisData\\original\\length1_79\\training_0.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\rename\\length1_79\\training_0.csv",
+      "ops": [
+        {
+          "op": "rename",
+          "applied": {
+            "Country": "Country__renamed"
+          }
+        }
+      ],
+      "rows_before": 155,
+      "rows_after": 155,
+      "schema_diff": {
+        "added": [
+          "Country__renamed"
+        ],
+        "removed": [
+          "Country"
+        ],
+        "dtype_changes": []
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length1_79\\training_1.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\rename\\length1_79\\training_1.csv",
+      "ops": [
+        {
+          "op": "rename",
+          "applied": {
+            "Country": "Country__renamed"
+          }
+        }
+      ],
+      "rows_before": 79,
+      "rows_after": 79,
+      "schema_diff": {
+        "added": [
+          "Country__renamed"
+        ],
+        "removed": [
+          "Country"
+        ],
+        "dtype_changes": []
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length1_79\\test_0.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\rename\\length1_79\\test_0.csv",
+      "ops": [
+        {
+          "op": "rename",
+          "applied": {
+            "Country": "Country__renamed"
+          }
+        }
+      ],
+      "rows_before": 155,
+      "rows_after": 155,
+      "schema_diff": {
+        "added": [
+          "Country__renamed"
+        ],
+        "removed": [
+          "Country"
+        ],
+        "dtype_changes": []
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length1_79\\test_1.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\rename\\length1_79\\test_1.csv",
+      "ops": [
+        {
+          "op": "rename",
+          "applied": {
+            "Country": "Country__renamed"
+          }
+        }
+      ],
+      "rows_before": 79,
+      "rows_after": 79,
+      "schema_diff": {
+        "added": [
+          "Country__renamed"
+        ],
+        "removed": [
+          "Country"
+        ],
+        "dtype_changes": []
+      }
+    }
+  ],
+  "note": "target.csv copied unchanged; training/test evolved using the same per-task plan; blank/unnamed index cols dropped"
+}

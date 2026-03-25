@@ -1,0 +1,36 @@
+{
+  "seed": 3627240110,
+  "built_at": "2026-02-25T16:05:21.108114",
+  "join_keys": [],
+  "rename_col": "petal width (cm)",
+  "drop_col": "petal length (cm)",
+  "address_col": null,
+  "datetime_col": null,
+  "datetime_format": null,
+  "meaning_num_col": "sepal width (cm)",
+  "meaning_cat_col": "petal length (cm)",
+  "datetime_rule": "flip_date_time",
+  "category_keep_topk": 2,
+  "unit_scale_divisor": 10.0,
+  "task_id": "length1_18",
+  "ops": [
+    "rename"
+  ],
+  "plan_sample_rows": 500,
+  "label_col": "y",
+  "label_source_file": "training_0.csv",
+  "protected_cols": [
+    "y"
+  ],
+  "global_seed": 7,
+  "task_seed": 3627240110,
+  "label_priority": [
+    "Score",
+    "label",
+    "target",
+    "y",
+    "class",
+    "outcome",
+    "risk_category"
+  ]
+}

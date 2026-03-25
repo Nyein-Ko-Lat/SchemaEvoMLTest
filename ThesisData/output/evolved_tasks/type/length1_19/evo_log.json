@@ -1,0 +1,176 @@
+{
+  "task_folder": "C:\\ThesisData\\original\\length1_19",
+  "created_at": "2026-03-10T11:05:24.568414",
+  "ops": [
+    "type"
+  ],
+  "mode_key_sensitive": "key",
+  "plan": {
+    "seed": 2384468810,
+    "built_at": "2026-03-10T11:05:24.565081",
+    "join_keys": [
+      "calaccess_committee_id",
+      "committee_name"
+    ],
+    "rename_col": "committee_name",
+    "drop_col": "contributor_occupation",
+    "address_col": null,
+    "datetime_col": "date_received",
+    "datetime_format": "%Y-%m-%d",
+    "meaning_num_col": "amount",
+    "meaning_cat_col": "contributor_city",
+    "datetime_rule": "split_date_parts",
+    "category_keep_topk": 2,
+    "unit_scale_divisor": 1000.0,
+    "task_id": "length1_19",
+    "ops": [
+      "type"
+    ],
+    "plan_sample_rows": 500,
+    "label_col": null,
+    "label_source_file": null,
+    "protected_cols": [],
+    "global_seed": 2,
+    "task_seed": 2384468810,
+    "label_priority": [
+      "Score",
+      "label",
+      "target",
+      "y",
+      "class",
+      "outcome",
+      "risk_category"
+    ]
+  },
+  "files": [
+    {
+      "input": "C:\\ThesisData\\original\\length1_19\\training_0.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\type\\length1_19\\training_0.csv",
+      "ops": [
+        {
+          "op": "type",
+          "changes": []
+        }
+      ],
+      "rows_before": 102,
+      "rows_after": 102,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": []
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length1_19\\training_1.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\type\\length1_19\\training_1.csv",
+      "ops": [
+        {
+          "op": "type",
+          "changes": [
+            {
+              "column": "date_received",
+              "rule": "add_date_parts",
+              "parse_used": "explicit_format",
+              "valid_ratio": 1.0,
+              "added": [
+                "date_received_year",
+                "date_received_month",
+                "date_received_day"
+              ]
+            },
+            {
+              "column": "contributor_zip",
+              "before": "str",
+              "after": "float64",
+              "rule": "to_numeric(errors=coerce)",
+              "na_ratio_before": 0.0005,
+              "na_ratio_after": 0.033
+            }
+          ]
+        }
+      ],
+      "rows_before": 20000,
+      "rows_after": 20000,
+      "schema_diff": {
+        "added": [
+          "date_received_day",
+          "date_received_month",
+          "date_received_year"
+        ],
+        "removed": [],
+        "dtype_changes": [
+          {
+            "column": "contributor_zip",
+            "before": "str",
+            "after": "float64"
+          }
+        ]
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length1_19\\test_0.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\type\\length1_19\\test_0.csv",
+      "ops": [
+        {
+          "op": "type",
+          "changes": []
+        }
+      ],
+      "rows_before": 102,
+      "rows_after": 102,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": []
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length1_19\\test_1.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\type\\length1_19\\test_1.csv",
+      "ops": [
+        {
+          "op": "type",
+          "changes": [
+            {
+              "column": "date_received",
+              "rule": "add_date_parts",
+              "parse_used": "explicit_format",
+              "valid_ratio": 1.0,
+              "added": [
+                "date_received_year",
+                "date_received_month",
+                "date_received_day"
+              ]
+            },
+            {
+              "column": "contributor_zip",
+              "before": "str",
+              "after": "float64",
+              "rule": "to_numeric(errors=coerce)",
+              "na_ratio_before": 0.0,
+              "na_ratio_after": 0.0004256979672922062
+            }
+          ]
+        }
+      ],
+      "rows_before": 28189,
+      "rows_after": 28189,
+      "schema_diff": {
+        "added": [
+          "date_received_day",
+          "date_received_month",
+          "date_received_year"
+        ],
+        "removed": [],
+        "dtype_changes": [
+          {
+            "column": "contributor_zip",
+            "before": "str",
+            "after": "float64"
+          }
+        ]
+      }
+    }
+  ],
+  "note": "target.csv copied unchanged; training/test evolved using the same per-task plan; blank/unnamed index cols dropped"
+}

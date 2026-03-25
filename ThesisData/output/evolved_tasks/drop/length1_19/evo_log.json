@@ -1,0 +1,122 @@
+{
+  "task_folder": "C:\\ThesisData\\original\\length1_19",
+  "created_at": "2026-02-27T22:38:34.028869",
+  "ops": [
+    "drop"
+  ],
+  "mode_key_sensitive": "key",
+  "plan": {
+    "seed": 46442074,
+    "built_at": "2026-02-27T22:38:34.026966",
+    "join_keys": [
+      "calaccess_committee_id",
+      "committee_name"
+    ],
+    "rename_col": "calaccess_committee_id",
+    "drop_col": "contributor_city",
+    "address_col": null,
+    "datetime_col": "date_received",
+    "datetime_format": "%Y-%m-%d",
+    "meaning_num_col": "amount",
+    "meaning_cat_col": "contributor_city",
+    "datetime_rule": "flip_date_time",
+    "category_keep_topk": 10,
+    "unit_scale_divisor": 10.0,
+    "task_id": "length1_19",
+    "ops": [
+      "drop"
+    ],
+    "plan_sample_rows": 500,
+    "label_col": null,
+    "label_source_file": null,
+    "protected_cols": [],
+    "global_seed": 7,
+    "task_seed": 46442074,
+    "label_priority": [
+      "Score",
+      "label",
+      "target",
+      "y",
+      "class",
+      "outcome",
+      "risk_category"
+    ]
+  },
+  "files": [
+    {
+      "input": "C:\\ThesisData\\original\\length1_19\\training_0.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\drop\\length1_19\\training_0.csv",
+      "ops": [
+        {
+          "op": "drop",
+          "applied": null,
+          "note": "drop_col not found in this file"
+        }
+      ],
+      "rows_before": 102,
+      "rows_after": 102,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": []
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length1_19\\training_1.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\drop\\length1_19\\training_1.csv",
+      "ops": [
+        {
+          "op": "drop",
+          "applied": "contributor_city"
+        }
+      ],
+      "rows_before": 20000,
+      "rows_after": 20000,
+      "schema_diff": {
+        "added": [],
+        "removed": [
+          "contributor_city"
+        ],
+        "dtype_changes": []
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length1_19\\test_0.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\drop\\length1_19\\test_0.csv",
+      "ops": [
+        {
+          "op": "drop",
+          "applied": null,
+          "note": "drop_col not found in this file"
+        }
+      ],
+      "rows_before": 102,
+      "rows_after": 102,
+      "schema_diff": {
+        "added": [],
+        "removed": [],
+        "dtype_changes": []
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length1_19\\test_1.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\drop\\length1_19\\test_1.csv",
+      "ops": [
+        {
+          "op": "drop",
+          "applied": "contributor_city"
+        }
+      ],
+      "rows_before": 28189,
+      "rows_after": 28189,
+      "schema_diff": {
+        "added": [],
+        "removed": [
+          "contributor_city"
+        ],
+        "dtype_changes": []
+      }
+    }
+  ],
+  "note": "target.csv copied unchanged; training/test evolved using the same per-task plan; blank/unnamed index cols dropped"
+}

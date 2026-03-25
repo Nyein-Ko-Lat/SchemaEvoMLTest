@@ -1,0 +1,36 @@
+{
+  "seed": 1068751018,
+  "built_at": "2026-02-25T16:07:44.634226",
+  "join_keys": [
+    "Country"
+  ],
+  "rename_col": "Country",
+  "drop_col": "Region",
+  "address_col": null,
+  "datetime_col": null,
+  "datetime_format": null,
+  "meaning_num_col": "Happiness_Score_17",
+  "meaning_cat_col": "Country",
+  "datetime_rule": "split_date_parts",
+  "category_keep_topk": 5,
+  "unit_scale_divisor": 10.0,
+  "task_id": "length1_79",
+  "ops": [
+    "rename"
+  ],
+  "plan_sample_rows": 500,
+  "label_col": null,
+  "label_source_file": null,
+  "protected_cols": [],
+  "global_seed": 7,
+  "task_seed": 1068751018,
+  "label_priority": [
+    "Score",
+    "label",
+    "target",
+    "y",
+    "class",
+    "outcome",
+    "risk_category"
+  ]
+}

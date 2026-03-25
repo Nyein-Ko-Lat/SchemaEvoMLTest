@@ -1,0 +1,139 @@
+{
+  "task_folder": "C:\\ThesisData\\original\\length1_28",
+  "created_at": "2026-02-25T16:05:40.594884",
+  "ops": [
+    "rename"
+  ],
+  "mode_key_sensitive": "key",
+  "plan": {
+    "seed": 2950504048,
+    "built_at": "2026-02-25T16:05:40.591495",
+    "join_keys": [
+      "school_name"
+    ],
+    "rename_col": "school_name",
+    "drop_col": "School ID",
+    "address_col": null,
+    "datetime_col": null,
+    "datetime_format": null,
+    "meaning_num_col": "reading_score",
+    "meaning_cat_col": "type",
+    "datetime_rule": "flip_date_time",
+    "category_keep_topk": 5,
+    "unit_scale_divisor": 1000.0,
+    "task_id": "length1_28",
+    "ops": [
+      "rename"
+    ],
+    "plan_sample_rows": 500,
+    "label_col": null,
+    "label_source_file": null,
+    "protected_cols": [],
+    "global_seed": 7,
+    "task_seed": 2950504048,
+    "label_priority": [
+      "Score",
+      "label",
+      "target",
+      "y",
+      "class",
+      "outcome",
+      "risk_category"
+    ]
+  },
+  "files": [
+    {
+      "input": "C:\\ThesisData\\original\\length1_28\\training_0.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\rename\\length1_28\\training_0.csv",
+      "ops": [
+        {
+          "op": "rename",
+          "applied": {
+            "school_name": "school_name__renamed"
+          }
+        }
+      ],
+      "rows_before": 15,
+      "rows_after": 15,
+      "schema_diff": {
+        "added": [
+          "school_name__renamed"
+        ],
+        "removed": [
+          "school_name"
+        ],
+        "dtype_changes": []
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length1_28\\training_1.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\rename\\length1_28\\training_1.csv",
+      "ops": [
+        {
+          "op": "rename",
+          "applied": {
+            "school_name": "school_name__renamed"
+          }
+        }
+      ],
+      "rows_before": 19585,
+      "rows_after": 19585,
+      "schema_diff": {
+        "added": [
+          "school_name__renamed"
+        ],
+        "removed": [
+          "school_name"
+        ],
+        "dtype_changes": []
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length1_28\\test_0.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\rename\\length1_28\\test_0.csv",
+      "ops": [
+        {
+          "op": "rename",
+          "applied": {
+            "school_name": "school_name__renamed"
+          }
+        }
+      ],
+      "rows_before": 15,
+      "rows_after": 15,
+      "schema_diff": {
+        "added": [
+          "school_name__renamed"
+        ],
+        "removed": [
+          "school_name"
+        ],
+        "dtype_changes": []
+      }
+    },
+    {
+      "input": "C:\\ThesisData\\original\\length1_28\\test_1.csv",
+      "output": "C:\\ThesisData\\output\\evolved_tasks\\rename\\length1_28\\test_1.csv",
+      "ops": [
+        {
+          "op": "rename",
+          "applied": {
+            "school_name": "school_name__renamed"
+          }
+        }
+      ],
+      "rows_before": 19585,
+      "rows_after": 19585,
+      "schema_diff": {
+        "added": [
+          "school_name__renamed"
+        ],
+        "removed": [
+          "school_name"
+        ],
+        "dtype_changes": []
+      }
+    }
+  ],
+  "note": "target.csv copied unchanged; training/test evolved using the same per-task plan; blank/unnamed index cols dropped"
+}

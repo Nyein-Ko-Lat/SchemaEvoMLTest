@@ -1,0 +1,34 @@
+{
+  "seed": 3407112616,
+  "built_at": "2026-03-03T13:37:45.466132",
+  "join_keys": [],
+  "rename_col": "A00900",
+  "drop_col": "A00900",
+  "address_col": null,
+  "datetime_col": null,
+  "datetime_format": null,
+  "meaning_num_col": "N02300",
+  "meaning_cat_col": "STATEFIPS",
+  "datetime_rule": "split_date_parts",
+  "category_keep_topk": 5,
+  "unit_scale_divisor": 1000.0,
+  "task_id": "length1_41",
+  "ops": [
+    "address_split"
+  ],
+  "plan_sample_rows": 500,
+  "label_col": null,
+  "label_source_file": null,
+  "protected_cols": [],
+  "global_seed": 7,
+  "task_seed": 3407112616,
+  "label_priority": [
+    "Score",
+    "label",
+    "target",
+    "y",
+    "class",
+    "outcome",
+    "risk_category"
+  ]
+}

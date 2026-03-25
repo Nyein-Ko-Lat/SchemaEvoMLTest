@@ -1,0 +1,368 @@
+,Source Zipcode,NAICS Code Description,Counts
+0,90230,Private Education and Health Services,1
+1,90715,Accommodations,1
+2,91104,Financial Services,1
+3,91112,Real Estate and Rental and Leasing Services,1
+4,91403,Private Education and Health Services,1
+5,91408,Accommodations,1
+6,91458,Financial Services,1
+7,91789,Accommodations,1
+8,92104,Private Education and Health Services,1
+9,92117,Accommodations,1
+10,92626,Transportation and Warehousing,1
+11,93644,Real Estate and Rental and Leasing Services,1
+12,93940,Food Services,1
+13,94002,Retail Trade,1
+14,94005,"Arts, Entertainment, and Recreation",2
+15,94010,Real Estate and Rental and Leasing Services,1
+16,94010,Retail Trade,1
+17,94010,Transportation and Warehousing,2
+18,94011,Wholesale Trade,1
+19,94012,Private Education and Health Services,1
+20,94012,"Professional, Scientific, and Technical Services",2
+21,94012,Real Estate and Rental and Leasing Services,1
+22,94012,Retail Trade,2
+23,94013,Accommodations,3
+24,94013,Certain Services,2
+25,94013,Financial Services,1
+26,94013,Information,1
+27,94013,Private Education and Health Services,1
+28,94013,"Professional, Scientific, and Technical Services",1
+29,94013,Retail Trade,1
+30,94014,Certain Services,1
+31,94014,Financial Services,2
+32,94014,Information,1
+33,94014,Multiple,1
+34,94014,"Professional, Scientific, and Technical Services",3
+35,94014,Retail Trade,1
+36,94015,"Arts, Entertainment, and Recreation",1
+37,94015,Food Services,2
+38,94015,Information,1
+39,94015,Multiple,2
+40,94015,"Professional, Scientific, and Technical Services",4
+41,94017,"Arts, Entertainment, and Recreation",1
+42,94017,Private Education and Health Services,1
+43,94017,"Professional, Scientific, and Technical Services",2
+44,94017,Real Estate and Rental and Leasing Services,3
+45,94017,Retail Trade,1
+46,94018,Food Services,1
+47,94018,Retail Trade,1
+48,94019,"Arts, Entertainment, and Recreation",1
+49,94019,Private Education and Health Services,1
+50,94019,Real Estate and Rental and Leasing Services,1
+51,94019,Retail Trade,1
+52,94021,Private Education and Health Services,1
+53,94021,Real Estate and Rental and Leasing Services,1
+54,94022,"Professional, Scientific, and Technical Services",1
+55,94022,Real Estate and Rental and Leasing Services,1
+56,94025,Accommodations,1
+57,94025,Multiple,1
+58,94028,Real Estate and Rental and Leasing Services,1
+59,94030,Real Estate and Rental and Leasing Services,1
+60,94044,Administrative and Support Services,1
+61,94044,Private Education and Health Services,1
+62,94065,Financial Services,1
+63,94066,Information,2
+64,94066,Real Estate and Rental and Leasing Services,2
+65,94080,Food Services,2
+66,94080,Private Education and Health Services,1
+67,94080,Real Estate and Rental and Leasing Services,1
+68,94086,"Professional, Scientific, and Technical Services",1
+69,94100,Accommodations,1
+70,94100,Food Services,1
+71,94101,Certain Services,1
+72,94101,Construction,2
+73,94101,Food Services,6
+74,94101,"Professional, Scientific, and Technical Services",4
+75,94101,Real Estate and Rental and Leasing Services,5
+76,94101,Retail Trade,1
+77,94102,Accommodations,300
+78,94102,Administrative and Support Services,135
+79,94102,"Arts, Entertainment, and Recreation",288
+80,94102,Certain Services,204
+81,94102,Construction,98
+82,94102,Financial Services,78
+83,94102,Food Services,576
+84,94102,Information,126
+85,94102,Insurance,9
+86,94102,Manufacturing,36
+87,94102,Multiple,130
+88,94102,Private Education and Health Services,468
+89,94102,"Professional, Scientific, and Technical Services",801
+90,94102,Real Estate and Rental and Leasing Services,936
+91,94102,Retail Trade,473
+92,94102,Transportation and Warehousing,104
+93,94102,Utilities,3
+94,94102,Wholesale Trade,65
+95,94103,Accommodations,324
+96,94103,Administrative and Support Services,147
+97,94103,"Arts, Entertainment, and Recreation",416
+98,94103,Certain Services,229
+99,94103,Construction,234
+100,94103,Financial Services,120
+101,94103,Food Services,716
+102,94103,Information,337
+103,94103,Insurance,33
+104,94103,Manufacturing,187
+105,94103,Multiple,240
+106,94103,Private Education and Health Services,221
+107,94103,"Professional, Scientific, and Technical Services",1155
+108,94103,Real Estate and Rental and Leasing Services,1414
+109,94103,Retail Trade,959
+110,94103,Transportation and Warehousing,124
+111,94103,Utilities,10
+112,94103,Wholesale Trade,311
+113,94104,Accommodations,16
+114,94104,Administrative and Support Services,197
+115,94104,"Arts, Entertainment, and Recreation",44
+116,94104,Certain Services,94
+117,94104,Construction,44
+118,94104,Financial Services,453
+119,94104,Food Services,173
+120,94104,Information,181
+121,94104,Insurance,58
+122,94104,Manufacturing,22
+123,94104,Multiple,62
+124,94104,Private Education and Health Services,210
+125,94104,"Professional, Scientific, and Technical Services",1360
+126,94104,Real Estate and Rental and Leasing Services,541
+127,94104,Retail Trade,151
+128,94104,Transportation and Warehousing,22
+129,94104,Utilities,1
+130,94104,Wholesale Trade,46
+131,94105,Accommodations,33
+132,94105,Administrative and Support Services,236
+133,94105,"Arts, Entertainment, and Recreation",95
+134,94105,Certain Services,114
+135,94105,Construction,69
+136,94105,Financial Services,361
+137,94105,Food Services,349
+138,94105,Information,375
+139,94105,Insurance,61
+140,94105,Manufacturing,28
+141,94105,Multiple,85
+142,94105,Private Education and Health Services,113
+143,94105,"Professional, Scientific, and Technical Services",1401
+144,94105,Real Estate and Rental and Leasing Services,553
+145,94105,Retail Trade,201
+146,94105,Transportation and Warehousing,37
+147,94105,Utilities,7
+148,94105,Wholesale Trade,55
+149,94106,"Arts, Entertainment, and Recreation",1
+150,94106,"Professional, Scientific, and Technical Services",3
+151,94106,Real Estate and Rental and Leasing Services,3
+152,94106,Retail Trade,2
+153,94107,Accommodations,241
+154,94107,Administrative and Support Services,168
+155,94107,"Arts, Entertainment, and Recreation",428
+156,94107,Certain Services,199
+157,94107,Construction,219
+158,94107,Financial Services,135
+159,94107,Food Services,470
+160,94107,Information,438
+161,94107,Insurance,24
+162,94107,Manufacturing,191
+163,94107,Multiple,184
+164,94107,Private Education and Health Services,185
+165,94107,"Professional, Scientific, and Technical Services",1383
+166,94107,Real Estate and Rental and Leasing Services,829
+167,94107,Retail Trade,452
+168,94107,Transportation and Warehousing,117
+169,94107,Utilities,10
+170,94107,Wholesale Trade,201
+171,94108,Accommodations,96
+172,94108,Administrative and Support Services,100
+173,94108,"Arts, Entertainment, and Recreation",99
+174,94108,Certain Services,179
+175,94108,Construction,47
+176,94108,Financial Services,144
+177,94108,Food Services,268
+178,94108,Information,120
+179,94108,Insurance,13
+180,94108,Manufacturing,26
+181,94108,Multiple,98
+182,94108,Private Education and Health Services,251
+183,94108,"Professional, Scientific, and Technical Services",722
+184,94108,Real Estate and Rental and Leasing Services,901
+185,94108,Retail Trade,691
+186,94108,Transportation and Warehousing,34
+187,94108,Utilities,2
+188,94108,Wholesale Trade,67
+189,94109,Accommodations,309
+190,94109,Administrative and Support Services,97
+191,94109,"Arts, Entertainment, and Recreation",294
+192,94109,Certain Services,188
+193,94109,Construction,116
+194,94109,Financial Services,79
+195,94109,Food Services,507
+196,94109,Information,83
+197,94109,Insurance,17
+198,94109,Manufacturing,29
+199,94109,Multiple,162
+200,94109,Private Education and Health Services,377
+201,94109,"Professional, Scientific, and Technical Services",796
+202,94109,Real Estate and Rental and Leasing Services,1973
+203,94109,Retail Trade,583
+204,94109,Transportation and Warehousing,107
+205,94109,Utilities,1
+206,94109,Wholesale Trade,95
+207,94110,Accommodations,749
+208,94110,Administrative and Support Services,130
+209,94110,"Arts, Entertainment, and Recreation",706
+210,94110,Certain Services,234
+211,94110,Construction,417
+212,94110,Financial Services,117
+213,94110,Food Services,870
+214,94110,Information,144
+215,94110,Insurance,20
+216,94110,Manufacturing,127
+217,94110,Multiple,278
+218,94110,Private Education and Health Services,413
+219,94110,"Professional, Scientific, and Technical Services",1074
+220,94110,Real Estate and Rental and Leasing Services,1341
+221,94110,Retail Trade,853
+222,94110,Transportation and Warehousing,116
+223,94110,Utilities,6
+224,94110,Wholesale Trade,126
+225,94111,Accommodations,44
+226,94111,Administrative and Support Services,179
+227,94111,"Arts, Entertainment, and Recreation",73
+228,94111,Certain Services,112
+229,94111,Construction,82
+230,94111,Financial Services,668
+231,94111,Food Services,257
+232,94111,Information,193
+233,94111,Insurance,82
+234,94111,Manufacturing,36
+235,94111,Multiple,60
+236,94111,Private Education and Health Services,141
+237,94111,"Professional, Scientific, and Technical Services",1267
+238,94111,Real Estate and Rental and Leasing Services,625
+239,94111,Retail Trade,199
+240,94111,Transportation and Warehousing,21
+241,94111,Utilities,3
+242,94111,Wholesale Trade,113
+243,94112,Accommodations,223
+244,94112,Administrative and Support Services,77
+245,94112,"Arts, Entertainment, and Recreation",177
+246,94112,Certain Services,154
+247,94112,Construction,582
+248,94112,Financial Services,43
+249,94112,Food Services,281
+250,94112,Information,36
+251,94112,Insurance,28
+252,94112,Manufacturing,40
+253,94112,Multiple,132
+254,94112,Private Education and Health Services,135
+255,94112,"Professional, Scientific, and Technical Services",298
+256,94112,Real Estate and Rental and Leasing Services,375
+257,94112,Retail Trade,384
+258,94112,Transportation and Warehousing,209
+259,94112,Utilities,8
+260,94112,Wholesale Trade,88
+261,94113,Administrative and Support Services,1
+262,94113,Financial Services,1
+263,94113,Multiple,1
+264,94113,Private Education and Health Services,1
+265,94113,Real Estate and Rental and Leasing Services,1
+266,94113,Retail Trade,2
+267,94113,Transportation and Warehousing,1
+268,94114,Accommodations,435
+269,94114,Administrative and Support Services,64
+270,94114,"Arts, Entertainment, and Recreation",287
+271,94114,Certain Services,107
+272,94114,Construction,139
+273,94114,Financial Services,74
+274,94114,Food Services,312
+275,94114,Information,94
+276,94114,Insurance,11
+277,94114,Manufacturing,19
+278,94114,Multiple,132
+279,94114,Private Education and Health Services,367
+280,94114,"Professional, Scientific, and Technical Services",757
+281,94114,Real Estate and Rental and Leasing Services,1017
+282,94114,Retail Trade,396
+283,94114,Transportation and Warehousing,19
+284,94114,Utilities,1
+285,94114,Wholesale Trade,44
+286,94115,Accommodations,198
+287,94115,Administrative and Support Services,52
+288,94115,"Arts, Entertainment, and Recreation",157
+289,94115,Certain Services,121
+290,94115,Construction,103
+291,94115,Financial Services,51
+292,94115,Food Services,294
+293,94115,Information,39
+294,94115,Insurance,5
+295,94115,Manufacturing,14
+296,94115,Multiple,129
+297,94115,Private Education and Health Services,557
+298,94115,"Professional, Scientific, and Technical Services",673
+299,94115,Real Estate and Rental and Leasing Services,1065
+300,94115,Retail Trade,376
+301,94115,Transportation and Warehousing,53
+302,94115,Utilities,1
+303,94115,Wholesale Trade,55
+304,94116,Accommodations,142
+305,94116,Administrative and Support Services,33
+306,94116,"Arts, Entertainment, and Recreation",167
+307,94116,Certain Services,79
+308,94116,Construction,412
+309,94116,Financial Services,61
+310,94116,Food Services,155
+311,94116,Information,34
+312,94116,Insurance,20
+313,94116,Manufacturing,20
+314,94116,Multiple,83
+315,94116,Private Education and Health Services,177
+316,94116,"Professional, Scientific, and Technical Services",332
+317,94116,Real Estate and Rental and Leasing Services,392
+318,94116,Retail Trade,180
+319,94116,Transportation and Warehousing,101
+320,94116,Utilities,4
+321,94116,Wholesale Trade,90
+322,94117,Accommodations,420
+323,94117,Administrative and Support Services,51
+324,94117,"Arts, Entertainment, and Recreation",283
+325,94117,Certain Services,86
+326,94117,Construction,145
+327,94117,Financial Services,26
+328,94117,Food Services,332
+329,94117,Information,77
+330,94117,Insurance,6
+331,94117,Manufacturing,40
+332,94117,Multiple,138
+333,94117,Private Education and Health Services,185
+334,94117,"Professional, Scientific, and Technical Services",541
+335,94117,Real Estate and Rental and Leasing Services,1386
+336,94117,Retail Trade,473
+337,94117,Transportation and Warehousing,30
+338,94117,Utilities,1
+339,94117,Wholesale Trade,42
+340,94118,Accommodations,181
+341,94118,Administrative and Support Services,81
+342,94118,"Arts, Entertainment, and Recreation",201
+343,94118,Certain Services,109
+344,94118,Construction,215
+345,94118,Financial Services,67
+346,94118,Food Services,325
+347,94118,Information,46
+348,94118,Insurance,28
+349,94118,Manufacturing,36
+350,94118,Multiple,122
+351,94118,Private Education and Health Services,559
+352,94118,"Professional, Scientific, and Technical Services",702
+353,94118,Real Estate and Rental and Leasing Services,1330
+354,94118,Retail Trade,438
+355,94118,Transportation and Warehousing,82
+356,94118,Utilities,6
+357,94118,Wholesale Trade,66
+358,94119,Administrative and Support Services,1
+359,94119,"Arts, Entertainment, and Recreation",1
+360,94119,Construction,2
+361,94119,Food Services,3
+362,94119,"Professional, Scientific, and Technical Services",1
+363,94119,Real Estate and Rental and Leasing Services,3
+364,94119,Retail Trade,3
+365,94120,Certain Services,1
+366,94120,Construction,1
