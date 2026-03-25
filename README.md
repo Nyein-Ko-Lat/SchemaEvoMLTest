@@ -35,6 +35,9 @@ The repository contains the main scripts used for:
 ---
 #requirement
 
+```md
+Tested with Python 3.9+
+```
 Install dependencies using:
 
 ```bash
