@@ -33,6 +33,14 @@ The repository contains the main scripts used for:
   Aggregates JSONL experiment outputs and exports summary result tables.
 
 ---
+#requirement
+
+Install dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+---
 ## Experimental Workflow
 
 The experiment pipeline follows three main stages:
