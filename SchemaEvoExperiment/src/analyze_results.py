@@ -523,7 +523,7 @@ def main():
         .sort_values(["variant", "count"], ascending=[True, False])
     )
     # round decimal to 2 places in each table
-    for tbl in [crash_tbl, drift_tbl, prof_tbl, silent_tbl]:
+    for tbl in [crash_tbl, drift_tbl, silent_tbl]:
         for c in tbl.select_dtypes(include=["float64", "float32"]).columns:
             tbl[c] = tbl[c].round(2)
 
