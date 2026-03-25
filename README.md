@@ -97,6 +97,16 @@ https://gitlab.com/jwjwyoung/autopipeline-benchmarks/-/tree/main/github-pipeline
 **The dataset is not redistributed in this repository. Users should obtain it from the original source and place it in the expected input directory before running the experiments.**
 
 ---
+## Sample Files Included
+
+This repository includes a small set of representative sample CSV files and summary outputs to illustrate:
+- baseline input structure,
+- schema-evolved examples,
+- and the format of analysis-ready results.
+
+These files are included for demonstration and reproducibility support only. They are not the full benchmark dataset or the full generated experiment outputs.
+
+---
 ## Reproducibility Notes
 To reproduce the full experiment, users should:
 1. obtain the original benchmark dataset from its official source,
