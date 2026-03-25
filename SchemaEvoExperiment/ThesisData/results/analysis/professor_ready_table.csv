@@ -1,0 +1,15 @@
+variant,align_mode,n_tasks,crash_rate,success_rate
+rename,strict,552,0.93,0.07
+drop,strict,552,0.7,0.3
+rename,stability,553,0.31,0.69
+meaning,strict,552,0.3,0.7
+meaning,stability,472,0.29,0.71
+address_split,strict,552,0.1,0.9
+type,strict,552,0.02,0.98
+drop,stability,553,0.01,0.99
+address_split,stability,553,0.01,0.99
+type,stability,553,0.01,0.99
+add,stability,553,0.0,1.0
+baseline,stability,553,0.0,1.0
+add,strict,552,0.0,1.0
+baseline,strict,552,0.0,1.0

@@ -1,0 +1,15 @@
+variant,align_mode,n_success,n_silent,silent_rate,baseline_n_success,baseline_n_silent,baseline_silent_rate,delta_silent_count,delta_silent_rate
+rename,stability,381,147,0.39,553,0,0.0,147,0.39
+drop,stability,549,133,0.24,553,0,0.0,133,0.24
+meaning,stability,336,93,0.28,553,0,0.0,93,0.28
+type,stability,550,18,0.03,553,0,0.0,18,0.03
+address_split,stability,550,12,0.02,553,0,0.0,12,0.02
+add,stability,553,0,0.0,553,0,0.0,0,0.0
+baseline,stability,553,0,0.0,553,0,0.0,0,0.0
+meaning,strict,384,102,0.27,552,0,0.0,102,0.27
+type,strict,542,18,0.03,552,0,0.0,18,0.03
+drop,strict,165,4,0.02,552,0,0.0,4,0.02
+rename,strict,40,2,0.05,552,0,0.0,2,0.05
+add,strict,552,0,0.0,552,0,0.0,0,0.0
+address_split,strict,495,0,0.0,552,0,0.0,0,0.0
+baseline,strict,552,0,0.0,552,0,0.0,0,0.0
