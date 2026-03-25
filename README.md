@@ -64,3 +64,11 @@ The experiment pipeline follows three main stages:
 
 ```bash
 python evolve_autopipeline_patched.py --root C:/ThesisData/original --out C:/ThesisData/output/evolved_tasks --variants meaning --limit 100 --offset 0 --seed 2 --resume
+### 2. Run ML evaluation
+```bash
+python schema_evolve_ml_testing.py --baseline_root C:/ThesisData/output/evolved_tasks/baseline --evolved_root C:/ThesisData/output/evolved_tasks/baseline --variant baseline --align_mode stability --limit 100 --offset 0 --resume --out_csv C:/ThesisData/results/baseline_stability.csv --out_jsonl C:/ThesisData/results/baseline_stability.jsonl --n_jobs 2
+
+### 2. Run ML evaluation
+```bash
+python analyze_results.py --inputs C:/ThesisData/results/*.jsonl --out_dir C:/ThesisData/results/analysis
+
