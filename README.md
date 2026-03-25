@@ -33,16 +33,6 @@ The repository contains the main scripts used for:
   Aggregates JSONL experiment outputs and exports summary result tables.
 
 ---
-## Dataset Availability
-
-This study uses the Auto-Pipeline benchmark dataset introduced by Yang et al. (VLDB 2021), which contains approximately 700 real-world data preparation pipelines.
-
-The dataset is publicly available at:
-https://gitlab.com/jwjwyoung/autopipeline-benchmarks/-/tree/main/github-pipelines
-
-The dataset is not redistributed in this repository. Users should obtain it from the original source and place it in the expected input directory before running the experiments.
-
----
 ## Experimental Workflow
 
 The experiment pipeline follows three main stages:
@@ -64,11 +54,72 @@ The experiment pipeline follows three main stages:
 
 ```bash
 python evolve_autopipeline_patched.py --root C:/ThesisData/original --out C:/ThesisData/output/evolved_tasks --variants meaning --limit 100 --offset 0 --seed 2 --resume
+```
 ### 2. Run ML evaluation
 ```bash
 python schema_evolve_ml_testing.py --baseline_root C:/ThesisData/output/evolved_tasks/baseline --evolved_root C:/ThesisData/output/evolved_tasks/baseline --variant baseline --align_mode stability --limit 100 --offset 0 --resume --out_csv C:/ThesisData/results/baseline_stability.csv --out_jsonl C:/ThesisData/results/baseline_stability.jsonl --n_jobs 2
-
-### 2. Run ML evaluation
+```
+### 3. Aggregate results
 ```bash
 python analyze_results.py --inputs C:/ThesisData/results/*.jsonl --out_dir C:/ThesisData/results/analysis
+```
+---
+#Expected Folder Structure
+```bash
+C:/ThesisData/
+├── original/
+├── output/
+│   └── evolved_tasks/
+├── results/
+│   ├── *.csv
+│   ├── *.jsonl
+│   └── analysis/
+```
+---
+## Dataset Availability
 
+This study uses the Auto-Pipeline benchmark dataset introduced by Yang et al. (VLDB 2021), which contains approximately 700 real-world data preparation pipelines.
+
+The dataset is publicly available at:
+https://gitlab.com/jwjwyoung/autopipeline-benchmarks/-/tree/main/github-pipelines
+
+**The dataset is not redistributed in this repository. Users should obtain it from the original source and place it in the expected input directory before running the experiments.**
+
+---
+## Reproducibility Notes
+To reproduce the full experiment, users should:
+1. obtain the original benchmark dataset from its official source,
+2. place the dataset under the expected input directory,
+3. generate evolved task variants,
+4. run the ML evaluation scripts,
+5. aggregate the resulting logs and outputs.
+
+The repository is intended as a research codebase supporting the experimental findings reported in the thesis.
+
+---
+## Outputs
+Typical outputs produced by the experiments include:
+
+- task-level CSV summaries,
+- JSONL execution logs,
+- aggregated summary tables,
+- and analysis-ready result files.
+
+These outputs are used to evaluate:
+
+- execution failures,
+- silent failures,
+- and prediction drift under schema evolution.
+
+---
+## Notes
+This repository is provided as research code developed for controlled experimentation and thesis reproducibility. The implementation prioritizes experimental correctness and traceability over production-level packaging
+
+---
+## Citation
+If you use or reference this repository, please cite the corresponding thesis.
+
+## Author
+Nyein Ko Lat
+GISMA University of Applied Science
+M.ENG.Computer Science
