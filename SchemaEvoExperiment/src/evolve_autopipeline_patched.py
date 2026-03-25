@@ -33,7 +33,7 @@ import re
 READ_KW = dict(engine="python", on_bad_lines="skip")  # keep consistent with evaluation
 
 def read_csv(path: Path, nrows: Optional[int] = None) -> pd.DataFrame:
-    # You can speed this up by trying engine="c" first, but keep as-is for consistency.
+
     if nrows is None:
         df = pd.read_csv(path, **READ_KW)
     else:
@@ -206,7 +206,7 @@ def is_task_already_evolved(out_folder: Path, variant: str) -> bool:
         return False
 
     if variant == "baseline":
-        # baseline writes manifest.json and evo_log.json too in your code,
+        # baseline writes manifest.json and evo_log.json too,
         # but baseline copies files byte-for-byte, so accept either condition
         if (out_folder / "manifest.json").exists() and (out_folder / "evo_log.json").exists():
             return True
@@ -302,7 +302,7 @@ def build_plan_for_task(
     if plan["meaning_cat_col"] is None:
         plan["meaning_cat_col"] = choose_from(non_key_cols) or choose_from(any_cols)
 
-    # Type evolution rules: include merge reverse option if you want later
+    # Type evolution rules:
     plan["datetime_rule"] = rng.choice(["flip_date_time", "split_date_parts"]).item()
 
     # Severity knobs
